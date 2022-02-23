@@ -11,6 +11,7 @@
 #include <catch2/interfaces/catch_interfaces_reporter.hpp>
 #include <catch2/internal/catch_unique_ptr.hpp>
 #include <catch2/internal/catch_optional.hpp>
+#include <catch2/internal/catch_stream.hpp>
 
 #include <iosfwd>
 #include <string>
@@ -91,7 +92,8 @@ namespace Catch {
 
         CumulativeReporterBase( ReporterConfig const& _config ):
             IStreamingReporter( _config.fullConfig() ),
-            m_stream( _config.stream() ) {}
+            m_wrapped_stream( _config.stream() ),
+            m_stream( m_wrapped_stream->stream() ) {}
         ~CumulativeReporterBase() override;
 
         void benchmarkPreparing( StringRef ) override {}
@@ -131,7 +133,10 @@ namespace Catch {
         //! Should the cumulative base store the assertion expansion for failed assertions?
         bool m_shouldStoreFailedAssertions = true;
 
-        //! Stream to write the output to
+        //! The stream wrapper as passed to us by outside code
+        IStream const* m_wrapped_stream;
+        //! Cached output stream from `m_wrapped_stream` to reduce
+        //! number of indirect calls needed to write output.
         std::ostream& m_stream;
 
         // We need lazy construction here. We should probably refactor it

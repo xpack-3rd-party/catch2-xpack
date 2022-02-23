@@ -9,6 +9,7 @@
 #define CATCH_REPORTER_STREAMING_BASE_HPP_INCLUDED
 
 #include <catch2/interfaces/catch_interfaces_reporter.hpp>
+#include <catch2/internal/catch_stream.hpp>
 
 #include <iosfwd>
 #include <string>
@@ -20,7 +21,8 @@ namespace Catch {
     public:
         StreamingReporterBase( ReporterConfig const& _config ):
             IStreamingReporter( _config.fullConfig() ),
-            m_stream( _config.stream() ) {}
+            m_wrapped_stream( _config.stream() ),
+            m_stream( m_wrapped_stream->stream() ) {}
 
 
         ~StreamingReporterBase() override;
@@ -66,7 +68,10 @@ namespace Catch {
         void listTags( std::vector<TagInfo> const& tags ) override;
 
     protected:
-        //! Stream that the reporter output should be written to
+        //! The stream wrapper as passed to us by outside code
+        IStream const* m_wrapped_stream;
+        //! Cached output stream from `m_wrapped_stream` to reduce
+        //! number of indirect calls needed to write output.
         std::ostream& m_stream;
 
         TestRunInfo currentTestRunInfo{ "test run has not started yet"_sr };
