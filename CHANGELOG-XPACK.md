@@ -8,7 +8,7 @@ and close existing issues and pull requests.
 
 ## 2022-02-25
 
-- v2.13.8-1
+- v2.13.8-2
 - add cmake & meson, with tests
 - create the `xpack` branch based on v2.13.8, commit
 216713a4066b79d9803d374f261ccb30c0fb451f from 03 Feb 2022
