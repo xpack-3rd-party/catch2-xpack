@@ -91,7 +91,7 @@ on top of an Arm semihosting environment.
 
 The following folders should be used during the build:
 
-- `include`
+- `single_include`
 
 The header files can then be included in user projects with statements like:
 
@@ -166,9 +166,6 @@ exe = executable(
   cpp_args: xpack_3rd_party_catch2_dependency_cpp_args,
   dependencies: [
     xpack_3rd_party_catch2_dependency,
-  ],
-  link_with: [
-    xpack_3rd_party_catch2_static,
   ],
 )
 ```
