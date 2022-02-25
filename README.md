@@ -1,7 +1,5 @@
 # A source library xPack with Catch2, a modern, C++-native, test framework for unit-tests
 
-Note: this project is work in progress.
-
 This project provides the **Catch2** source libraries as an xPack dependency.
 
 The project is hosted on GitHub as
@@ -98,16 +96,13 @@ The following folders should be used during the build:
 The header files can then be included in user projects with statements like:
 
 ```c++
-#include "xxx/yyy.h"
+#define CATCH_CONFIG_MAIN
+#include <catch2/catch.hpp>
 ```
 
 #### Source folders
 
-- `src`
-
-The source file to be added to user projects are:
-
-- `src/catch2.cpp`
+- None.
 
 #### Preprocessor definitions
 
@@ -126,7 +121,7 @@ This will enable POSIX support in newlib.
 
 #### C++ Namespaces
 
-- `...`
+- `Catch`
 
 #### C++ Classes
 
@@ -185,14 +180,16 @@ presented below and is also available in
 [tests-xpack/src/sample-test.cpp](tests-xpack/src/sample-test.cpp).
 
 ```c++
-#include "catch2/catch_test_macros.hpp"
+#define CATCH_CONFIG_MAIN
+#include <catch2/catch.hpp>
 
 // ...
 
-int
-main ([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
+TEST_CASE ("Check various conditions")
 {
-  return 0;
+  CHECK (compute_one () == 1);
+  CHECK (strcmp (compute_aaa (), "aaa") == 0);
+  CHECK (compute_condition ());
 }
 ```
 
