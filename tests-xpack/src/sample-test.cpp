@@ -58,17 +58,19 @@ exercise_throw (bool mustThrow)
 
 // ----------------------------------------------------------------------------
 
-TEST_CASE( "Check various conditions" ) {
-  CHECK( compute_one() == 1 );
-  CHECK( strcmp(compute_aaa(), "aaa") == 0 );
-  CHECK( compute_condition() );
+TEST_CASE ("Check various conditions")
+{
+  CHECK (compute_one () == 1);
+  CHECK (strcmp (compute_aaa (), "aaa") == 0);
+  CHECK (compute_condition ());
 }
 
 #if defined(__EXCEPTIONS)
 
-TEST_CASE( "Check exceptions" ) {
-  CHECK_THROWS( exercise_throw(true) );
-  CHECK_NOTHROW(  exercise_throw(false) );
+TEST_CASE ("Check exceptions")
+{
+  CHECK_THROWS (exercise_throw (true));
+  CHECK_NOTHROW (exercise_throw (false));
 }
 
 #endif // defined(__EXCEPTIONS)
