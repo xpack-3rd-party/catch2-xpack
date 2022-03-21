@@ -37,6 +37,8 @@ cd my-project
 xpm init # Unless a package.json is already present
 
 xpm install @xpack-3rd-party/catch2@latest
+
+ls -l xpacks/xpack-3rd-party-catch2
 ```
 
 ### Git submodule
