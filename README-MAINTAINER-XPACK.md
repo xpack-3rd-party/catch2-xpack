@@ -100,4 +100,4 @@ When the release is considered stable, promote it as `latest`:
 
 - `npm dist-tag ls @xpack-3rd-party/catch2`
 - `npm dist-tag add @xpack-3rd-party/catch2@2.13.8-2 latest`
-- `npm dist-tag ls @@xpack-3rd-party/catch2`
+- `npm dist-tag ls @xpack-3rd-party/catch2`
