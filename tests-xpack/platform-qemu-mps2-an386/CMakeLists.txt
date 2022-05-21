@@ -107,7 +107,7 @@ function(add_test_executable name)
     -Wl,--gc-sections
 
     # Force the linker to keep the interrupt vectors which otherwise
-    # are not refered from anywhere.
+    # are not referred from anywhere.
     -u_interrupt_vectors
 
     # Including files from other packages is not very nice, but functional.

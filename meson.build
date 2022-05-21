@@ -16,7 +16,7 @@
 #
 # `subdir('xpacks/xpack-3rd-party-catch2')`
 #
-# The result is a library that can be refered as:
+# The result is a library that can be referred as:
 #
 # ```
 #  dependencies: [ xpack_3rd_party_catch2_dependency ],
