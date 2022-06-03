@@ -124,7 +124,7 @@ foreach name : test_names
   xpack_link_args += [
     # Path are relative to the build folder.
     '-Txpacks/micro-os-plus-devices-qemu-cortexm/linker-scripts/mem.ld',
-    '-Txpacks/micro-os-plus-architecture-cortexm/linker-scripts/sections.ld',
+    '-Txpacks/micro-os-plus-architecture-cortexm/linker-scripts/sections-flash.ld',
   ]
 
   xpack_link_with += [
