@@ -1,5 +1,5 @@
 [![license](https://img.shields.io/github/license/xpack-3rd-party/catch2-xpack)](https://github.com/xpack-3rd-party/catch2-xpack/blob/xpack/LICENSE)
-[![CI on Push](https://github.com/xpack-3rd-party/catch2-xpack/workflows/CI%20on%20Push/badge.svg)](https://github.com/xpack-3rd-party/catch2-xpack/actions?query=workflow%3A%22CI+on+Push%22)
+[![CI on Push](https://github.com/xpack-3rd-party/catch2-xpack/actions/workflows/CI.yml/badge.svg)](https://github.com/xpack-3rd-party/catch2-xpack/actions/workflows/CI.yml)
 [![GitHub issues](https://img.shields.io/github/issues/xpack-3rd-party/catch2-xpack.svg)](https://github.com/xpack-3rd-party/catch2-xpack/issues/)
 [![GitHub pulls](https://img.shields.io/github/issues-pr/xpack-3rd-party/catch2-xpack.svg)](https://github.com/xpack-3rd-party/catch2-xpack/pulls)
 
@@ -44,6 +44,64 @@ Code formatting is done using `clang-format --style=file`, either manually
 from a script, or automatically from Visual Studio Code, or the Eclipse
 CppStyle plug-in.
 
+Always reformat the source files that were changed.
+
+## How to make new releases
+
+### Release schedule
+
+There are no fixed releases.
+
+### Check Git
+
+In the `micro-os-plus/catch2-xpack` Git repo:
+
+- switch to the `xpack-develop` branch
+- if needed, merge the `xpack` branch
+
+No need to add a tag here, it'll be added when the release is created.
+
+### Increase the version
+
+Determine the upstream version (like `4.0.0`) and update the `package.json`
+file; the format is `4.0.0-pre`.
+
+### Fix possible open issues
+
+Check GitHub issues and pull requests:
+
+- <https://github.com/micro-os-plus/catch2-xpack/issues/>
+
+and fix them; assign them to a milestone (like `4.0.0`).
+
+### Update `README-MAINTAINER.md`
+
+Update the `README-MAINTAINER.md` file to reflect the changes
+related to the new version.
+
+### Update `CHANGELOG.md`
+
+- open the `CHANGELOG.md` file
+- check if all previous fixed issues are in
+- add a new entry like _- v4.0.0 prepared_
+- commit with a message like _prepare v4.0.0_
+
+### Push changes
+
+- reformat the source files that were changed
+- commit and push
+
+### Manual tests
+
+To run the tests manually on the local machine:
+
+```sh
+cd ~Work/catch2-xpack.git
+
+xpm run install-all
+xpm run test-all
+```
+
 ## Publish on the npmjs.com server
 
 - select the `xpack-develop` branch
@@ -82,7 +140,7 @@ xpm run test-all
 ## Continuous Integration
 
 The CI tests are performed on GitHub Actions, as the
-[CI on Push](https://github.com/xpack-3rd-party/catch2-xpack/actions?query=workflow%3A%22CI+on+Push%22)
+[CI on Push](https://github.com/xpack-3rd-party/catch2-xpack/actions/workflows/CI.yml)
 workflow.
 
 ## Update the repo

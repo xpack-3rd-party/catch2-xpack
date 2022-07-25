@@ -1,6 +1,6 @@
 # A source library xPack with Catch2, a modern, C++-native, test framework for unit-tests
 
-This project provides the **Catch2** source libraries as an xPack dependency.
+This project provides the **Catch2** source library as an xPack dependency.
 
 The project is hosted on GitHub as
 [xpack-3rd-party/catch2-xpack](https://github.com/xpack-3rd-party/catch2-xpack).
@@ -15,7 +15,7 @@ For maintainer info, please see the
 
 ## Install
 
-As a source library xPacks, the easiest way to add it to a project is via
+As a source library xPack, the easiest way to add it to a project is via
 **xpm**, but it can also be used as any Git project, for example as a submodule.
 
 ### Prerequisites
@@ -106,7 +106,7 @@ The header files to be included in user projects are:
 
 The source files to be added to user projects are:
 
-- None.
+- none
 
 #### Preprocessor definitions
 
@@ -133,8 +133,8 @@ The project includes many classes; see the documentation for details.
 
 #### CMake
 
-To integrate the Google Test source library into a CMake application, add this
-folder to the build:
+To integrate the Google Test source library into a CMake application,
+add this folder to the build:
 
 ```cmake
 add_subdirectory("xpacks/xpack-3rd-party-catch2")`
@@ -152,8 +152,8 @@ target_link_libraries(your-target PRIVATE
 
 #### meson
 
-To integrate the Google Test source library into a meson application, add this
-folder to the build:
+To integrate the Google Test source library into a meson application,
+add this folder to the build:
 
 ```meson
 subdir('xpacks/xpack-3rd-party-catch2')
