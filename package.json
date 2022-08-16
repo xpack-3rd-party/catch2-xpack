@@ -15,10 +15,10 @@
     "type": "git",
     "url": "https://github.com/xpack-3rd-party/catch2-xpack.git"
   },
+  "homepage": "https://github.com/xpack-3rd-party/catch2-xpack/",
   "bugs": {
     "url": "https://github.com/xpack-3rd-party/catch2-xpack/issues/"
   },
-  "homepage": "https://github.com/xpack-3rd-party/catch2-xpack/",
   "keywords": [
     "xpack"
   ],
@@ -39,15 +39,18 @@
   "license": "MIT",
   "config": {},
   "dependencies": {},
-  "devDependencies": {
-    "@xpack-dev-tools/cmake": "3.20.6-2.1",
-    "@xpack-dev-tools/meson-build": "0.59.4-1.1",
-    "@xpack-dev-tools/ninja-build": "1.10.2-5.1",
-    "@micro-os-plus/build-helper": "^2.10.1",
-    "@micro-os-plus/diag-trace": "^3.0.0"
-  },
+  "bundleDependencies": [],
+  "devDependencies": {},
   "xpack": {
-    "minimumXpmRequired": "0.13.7",
+    "minimumXpmRequired": "0.14.0",
+    "dependencies": {},
+    "devDependencies": {
+      "@xpack-dev-tools/cmake": "3.20.6-2.1",
+      "@xpack-dev-tools/meson-build": "0.59.4-1.1",
+      "@xpack-dev-tools/ninja-build": "1.10.2-5.1",
+      "@micro-os-plus/build-helper": "^2.10.1",
+      "@micro-os-plus/diag-trace": "^3.0.0"
+    },
     "properties": {
       "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}",
       "buildFolderRelativePathPosix": "{{ 'build' | path_posix_join: configuration.name | downcase }}",
