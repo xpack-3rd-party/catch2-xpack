@@ -78,7 +78,9 @@ xpack_include_directories += [
 # https://mesonbuild.com/Reference-manual_functions.html#declare_dependency
 xpack_3rd_party_catch2_dependency = declare_dependency(
   include_directories: include_directories(xpack_include_directories),
+  sources: files(),
   compile_args: xpack_common_args
+  dependencies: []
 )
 
 # Dependencies cannot store language specific definitions, the only
