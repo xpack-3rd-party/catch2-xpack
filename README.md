@@ -227,10 +227,8 @@ platforms.
 The full set can be run manually with the following commands:
 
 ```sh
-cd ~Work/catch2-xpack.git
-
-xpm run install-all
-xpm run test-all
+xpm run install-all -C ~/Work/xpack-3rd-party/catch2-xpack.git
+xpm run test-all -C ~/Work/xpack-3rd-party/catch2-xpack.git
 ```
 
 ### Documentation
