@@ -15,22 +15,22 @@ To clone the stable branch (`xpack`), run the following commands in a
 terminal (on Windows use the _Git Bash_ console):
 
 ```sh
-rm -rf ~/Work/catch2-xpack.git && \
-mkdir -p ~/Work && \
+rm -rf ~/Work/xpack-3rd-party/catch2-xpack.git && \
+mkdir -p ~/Work/xpack-3rd-party && \
 git clone \
   https://github.com/xpack-3rd-party/catch2-xpack.git \
-  ~/Work/catch2-xpack.git
+  ~/Work/xpack-3rd-party/catch2-xpack.git
 ```
 
 For development purposes, clone the `xpack-develop` branch:
 
 ```sh
-rm -rf ~/Work/catch2-xpack.git && \
-mkdir -p ~/Work && \
+rm -rf ~/Work/xpack-3rd-party/catch2-xpack.git && \
+mkdir -p ~/Work/xpack-3rd-party && \
 git clone \
   --branch xpack-develop \
   https://github.com/xpack-3rd-party/catch2-xpack.git \
-  ~/Work/catch2-xpack.git
+  ~/Work/xpack-3rd-party/catch2-xpack.git
 ```
 
 ## Prerequisites
