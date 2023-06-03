@@ -2,7 +2,7 @@
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/xpack-3rd-party/catch2-xpack)](https://github.com/xpack-3rd-party/catch2-xpack/tags/)
 [![npm (scoped)](https://img.shields.io/npm/v/@xpack-3rd-party/catch2.svg?color=blue)](https://www.npmjs.com/package/@xpack-3rd-party/catch2/)
 [![license](https://img.shields.io/github/license/xpack-3rd-party/catch2-xpack)](https://github.com/xpack-3rd-party/architecture-aarch32-xpack/blob/xpack/LICENSE)
-[![CI on Push](https://github.com/xpack-3rd-party/catch2-xpack/actions/workflows/CI.yml/badge.svg)](https://github.com/xpack-3rd-party/catch2-xpack/actions/workflows/CI.yml)
+[![CI on Push](https://github.com/xpack-3rd-party/catch2-xpack/actions/workflows/ci.yml/badge.svg)](https://github.com/xpack-3rd-party/catch2-xpack/actions/workflows/ci.yml)
 
 # A source library xPack with Catch2, a modern, C++-native, test framework for unit-tests
 
