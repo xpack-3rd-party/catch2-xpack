@@ -82,18 +82,18 @@ add_global_link_arguments(
 
 # The base folder is root, via the `top` link.
 xpack_dependencies = [
-  'xpacks/micro-os-plus-diag-trace', # -
-  # 'xpacks/micro-os-plus-micro-test-plus', # -
+  'xpacks/@micro-os-plus/diag-trace', # -
+  # 'xpacks/@micro-os-plus/micro-test-plus', # -
 
-  xpack_build_folder_relative_path + '/xpacks/micro-os-plus-version', # -
-  xpack_build_folder_relative_path + '/xpacks/xpack-3rd-party-arm-cmsis-core', # -
-  xpack_build_folder_relative_path + '/xpacks/micro-os-plus-architecture-cortexm', # (architecture) -
-  xpack_build_folder_relative_path + '/xpacks/micro-os-plus-semihosting', # diag-trace, architecture
-  xpack_build_folder_relative_path + '/xpacks/micro-os-plus-devices-cortexm', # semihosting
-  xpack_build_folder_relative_path + '/xpacks/micro-os-plus-startup', # version, diag-trace, architecture
-  xpack_build_folder_relative_path + '/xpacks/micro-os-plus-libs-c', # diag-trace, startup, architecture
-  xpack_build_folder_relative_path + '/xpacks/micro-os-plus-libs-cpp', # diag-trace
-  xpack_build_folder_relative_path + '/xpacks/micro-os-plus-devices-qemu-cortexm', # device, diag-trace | (device) arm-cmsis-core-m, architecture-cortexm-device
+  xpack_build_folder_relative_path + '/xpacks/@micro-os-plus/version', # -
+  xpack_build_folder_relative_path + '/xpacks/@xpack-3rd-party/arm-cmsis-core', # -
+  xpack_build_folder_relative_path + '/xpacks/@micro-os-plus/architecture-cortexm', # (architecture) -
+  xpack_build_folder_relative_path + '/xpacks/@micro-os-plus/semihosting', # diag-trace, architecture
+  xpack_build_folder_relative_path + '/xpacks/@micro-os-plus/devices-cortexm', # semihosting
+  xpack_build_folder_relative_path + '/xpacks/@micro-os-plus/startup', # version, diag-trace, architecture
+  xpack_build_folder_relative_path + '/xpacks/@micro-os-plus/libs-c', # diag-trace, startup, architecture
+  xpack_build_folder_relative_path + '/xpacks/@micro-os-plus/libs-cpp', # diag-trace
+  xpack_build_folder_relative_path + '/xpacks/@micro-os-plus/devices-qemu-cortexm', # device, diag-trace | (device) arm-cmsis-core-m, architecture-cortexm-device
 ]
 
 xpack_device_compile_definition='DEVICE_QEMU_CORTEX_M4'

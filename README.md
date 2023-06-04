@@ -50,7 +50,7 @@ xpm init # Unless a package.json is already present
 
 xpm install @xpack-3rd-party/catch2@latest
 
-ls -l xpacks/xpack-3rd-party-catch2
+ls -l xpacks/@xpack-3rd-party/catch2
 ```
 
 ### Git submodule
@@ -64,7 +64,7 @@ git init # Unless already a Git project
 mkdir -p xpacks
 
 git submodule add https://github.com/xpack-3rd-party/catch2-xpack.git \
-  xpacks/xpack-3rd-party-catch2
+  xpacks/@xpack-3rd-party/catch2
 ```
 
 ## Branches
@@ -149,7 +149,7 @@ To integrate the Google Test source library into a CMake application,
 add this folder to the build:
 
 ```cmake
-add_subdirectory("xpacks/xpack-3rd-party-catch2")`
+add_subdirectory("xpacks/@xpack-3rd-party/catch2")`
 ```
 
 The result is a static library that can be added as an application
@@ -168,7 +168,7 @@ To integrate the Google Test source library into a meson application,
 add this folder to the build:
 
 ```meson
-subdir('xpacks/xpack-3rd-party-catch2')
+subdir('xpacks/@xpack-3rd-party/catch2')
 ```
 
 The result is a static library and a dependency object that can be added

@@ -14,7 +14,7 @@
 
 # This file is intended to be consumed by applications with:
 #
-# `add_subdirectory("xpacks/xpack-3rd-party-catch2")`
+# `add_subdirectory("xpacks/@xpack-3rd-party/catch2")`
 #
 # The result is an interface library that can be added to the linker with:
 #
