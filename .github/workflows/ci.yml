@@ -30,9 +30,10 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [18]
         # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
-        os: [ubuntu-20.04, macos-11, windows-2022]
+        os: [ubuntu-22.04, macos-12, windows-2022]
+        xpm-version: ['0.16.1']
 
     steps:
     - name: Checkout
