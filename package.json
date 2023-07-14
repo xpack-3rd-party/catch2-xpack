@@ -15,9 +15,9 @@
     "type": "git",
     "url": "https://github.com/xpack-3rd-party/catch2-xpack.git"
   },
-  "homepage": "https://github.com/xpack-3rd-party/catch2-xpack/",
+  "homepage": "https://github.com/xpack-3rd-party/catch2-xpack",
   "bugs": {
-    "url": "https://github.com/xpack-3rd-party/catch2-xpack/issues/"
+    "url": "https://github.com/xpack-3rd-party/catch2-xpack/issues"
   },
   "keywords": [
     "xpack"
@@ -25,7 +25,7 @@
   "author": {
     "name": "Liviu Ionescu",
     "email": "ilg@livius.net",
-    "url": "https://github.com/ilg-ul/"
+    "url": "https://github.com/ilg-ul"
   },
   "contributors": [
     {
