@@ -1,7 +1,7 @@
 {
   "name": "@xpack-3rd-party/catch2",
   "version": "2.13.8-2",
-  "description": "A source xPack with Catch2, a modern, C++-native, test framework for unit-tests.",
+  "description": "A source code library with Catch2, a modern, C++-native, test framework for unit-tests.",
   "main": "",
   "scripts": {
     "npm-install": "npm install",
